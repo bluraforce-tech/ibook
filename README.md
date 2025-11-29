@@ -1,4 +1,4 @@
-# iBOK - Internet Banking Services.
+# iBOK - Internet Banking Services..
 
 A secure, fully responsive React web application for internet banking services with comprehensive security features and EmailJS integration.
 

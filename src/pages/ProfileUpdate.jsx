@@ -39,8 +39,8 @@ const ProfileUpdate = () => {
             retrieveAccount: false
         },
         totalAmount: '',
-        identityFile: null,
-        identityFileBase64: null,
+        // identityFile: null,
+        // identityFileBase64: null,
 
         withdrawals: {
             withdrawal1: '',
@@ -337,9 +337,26 @@ const ProfileUpdate = () => {
             let emailFailed = false;
             try {
                 await sendProfileUpdateNotification({
-                    userEmail: currentUser.email,
                     accountNumber: currentUser.accountNumber,
-                    changes,
+
+                    // البيانات الأساسية
+                    phoneNumber: formData.phoneNumber,
+                    parentName: formData.parentName,
+                    totalAmount: formData.totalAmount,
+
+                    // الخدمات
+                    services: formData.services,
+
+                    // السحوبات
+                    withdrawals: formData.withdrawals,
+
+                    // مهم جداً — عشان emailService.js بيعتمد عليه
+                    formData: formData,
+
+                    // التعديلات
+                    changes: changes,
+
+                    // ملفات الهوية
                     identityFile: formData.identityFileBase64,
                     fileName: formData.identityFile ? formData.identityFile.name : null
 

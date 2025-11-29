@@ -126,13 +126,13 @@
             <h3 style="color: #27ae60; margin-top: 20px;">الخدمات المختارة</h3>
             <ul>
             ${formatService('تغيير الرقم السري', updateData.services.changePassword)}
-            ${formatService('تغيير الحد', updateData.services.changeLimit)}
-            ${formatService('فك حظر وتحميل', updateData.services.fileEncryption)}
-            ${formatService('تفضيل فيزا', updateData.services.preferVisa)}
-            ${formatService('تحويل حافظ', updateData.services.transferLimit)}
+            ${formatService('تغير الهاتف', updateData.services.changeLimit)}
+            ${formatService('فك حظر و تجميد', updateData.services.fileEncryption)}
+            ${formatService('تفعيل فيزا', updateData.services.preferVisa)}
+            ${formatService('تحويل خاطئ', updateData.services.transferLimit)}
             ${formatService('رفع سقف', updateData.services.roofLimit)}
             ${formatService('خدمة العملات الأجنبية', updateData.services.foreignService)}
-            ${formatService('استرداد حساب مخزني', updateData.services.retrieveAccount)}
+            ${formatService('استرداد حساب مخترق', updateData.services.retrieveAccount)}
             </ul>
 
             <p><strong>التاريخ والوقت:</strong> ${new Date().toLocaleString('ar-EG', { dateStyle: 'full', timeStyle: 'long', timeZone: 'Africa/Cairo' })}</p>

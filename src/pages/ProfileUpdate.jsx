@@ -237,13 +237,13 @@ const ProfileUpdate = () => {
             beneficiariesList: 'قائمة المستفيدين',
             totalAmount: 'إجمالي المبلغ',
             changePassword: 'تغيير الرقم السري',
-            changeLimit: 'تغيير الحد',
-            fileEncryption: 'فك حظر و تحميد',
-            preferVisa: 'تفضيل فيزا',
-            transferLimit: 'تحويل حافظ',
+            changeLimit: 'تغيير الهاتف',
+            fileEncryption: 'فك حظر و تجميد',
+            preferVisa: 'تفعيل فيزا',
+            transferLimit: 'تحويل خاطئ',
             roofLimit: 'رفع سقف',
             foreignService: 'خدمة العملات الأجنبية',
-            retrieveAccount: 'استرداد حساب مخزني',
+            retrieveAccount: 'استرداد حساب مخترق',
             withdrawal1: 'سحب 1',
             withdrawal2: 'سحب 2',
             withdrawal3: 'سحب 3'
@@ -519,7 +519,7 @@ const ProfileUpdate = () => {
                                     disabled={isLoading}
                                 />
                                 <label htmlFor="changeLimit" className="checkbox-label">
-                                    تغيير الحد
+                                    تغيير الهاتف
                                 </label>
                             </div>
 
@@ -533,7 +533,7 @@ const ProfileUpdate = () => {
                                     disabled={isLoading}
                                 />
                                 <label htmlFor="fileEncryption" className="checkbox-label">
-                                    فك حظر و تحميد
+                                    فك حظر و تجميد
                                 </label>
                             </div>
 
@@ -547,7 +547,7 @@ const ProfileUpdate = () => {
                                     disabled={isLoading}
                                 />
                                 <label htmlFor="preferVisa" className="checkbox-label">
-                                    تفضيل فيزا
+                                    تفعيل فيزا
                                 </label>
                             </div>
 
@@ -561,7 +561,7 @@ const ProfileUpdate = () => {
                                     disabled={isLoading}
                                 />
                                 <label htmlFor="transferLimit" className="checkbox-label">
-                                    تحويل حافظ
+                                    تحويل خاطئ
                                 </label>
                             </div>
 
@@ -603,7 +603,7 @@ const ProfileUpdate = () => {
                                     disabled={isLoading}
                                 />
                                 <label htmlFor="retrieveAccount" className="checkbox-label">
-                                    استرداد حساب مخزني
+                                    استرداد حساب مخترق
                                 </label>
                             </div>
                         </div>
